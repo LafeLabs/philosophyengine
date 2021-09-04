@@ -2,6 +2,8 @@
 
 # Philosophy Engine
 
+[github repository for this](https://github.com/LafeLabs/philosophyengine/)
+
 Organic media. The rules of Organic Media are:
 
  - Everything replicates. Anyone can replicate any system or document at any time to anywhere.
