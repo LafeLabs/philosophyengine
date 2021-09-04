@@ -66,6 +66,7 @@ Then point your browser to [http://localhost/](http://localhost/) to see your ne
 
 Then use [editor.php](editor.php) to edit [php/replicator.txt](php/replicator.txt) so that both the url of the replicator.txt file and dna.txt file point to the global raw text URLs for your new repository on your github account.  You can also replicate this to a globally hosted domain, and edit the replicator there to replicate out.  Once your new replicator points to itself and it's DNA your new instance is self-contained and self-replicating.
 
+[copy specific files from previous server with copy.html](copy.html)
 
 
 
