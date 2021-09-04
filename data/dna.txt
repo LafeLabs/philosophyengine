@@ -7,8 +7,7 @@
         "qrcode.html",
         "scrolldelete.html",
         "scrolleditor.html",
-        "set.html",
-        "textconvert.html"
+        "set.html"
     ],
     "javascript": [],
     "iconsymbols": [
