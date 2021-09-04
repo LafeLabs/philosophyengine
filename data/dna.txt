@@ -4,6 +4,7 @@
         "copy.html",
         "fork.html",
         "index.html",
+        "qrcode.html",
         "scrolldelete.html",
         "scrolleditor.html",
         "set.html",
