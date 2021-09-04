@@ -65,7 +65,7 @@ function addDeleteButtons(){
     dirlist = document.getElementById("mainlist").getElementsByTagName("LI");
     for(var index = 0;index < dirlist.length;index++){
         var newdeletebutton = document.createElement("span");
-        newdeletebutton.innerHTML = "DELETE";
+        newdeletebutton.innerHTML = "!DELETE!";
         newdeletebutton.className = "button";
         dirlist[index].appendChild(newdeletebutton);
     }
@@ -96,6 +96,9 @@ function addDeleteButtons(){
 <style>
     body{
         font-size:2em;
+        font-family:courier;
+        background-color:black;
+        color:#00ff00;
     }
     table{
         font-family:courier;

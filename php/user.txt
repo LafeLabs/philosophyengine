@@ -48,7 +48,7 @@
     <div id = "marginbutton">⇳⇳⇳⇳⇳⇳⇳⇳⇳⇳⇳</div>
     <div id  = "scrollsbox">
         <input id = "scrollinput"/>
-        <a id = "scrolleditorlink" href = "scrolleditor.html">
+        <a id = "scrolleditorlink" href = "scrolleditor.php">
             <img style = "width:50px;display:block;margin:auto;padding-top:1em" src = "iconsymbols/edit.svg"/>
         </a>
     </div>
@@ -345,6 +345,7 @@ h1,h2,h3,h4{
     border:solid;
     border-radius:5px;
     text-align:center;
+    display:none;
 }
 #hidebutton{
     position:absolute;

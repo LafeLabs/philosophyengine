@@ -45,7 +45,7 @@
 
     <table>
         <tr>
-            <td>Currentfile:</td>
+            <td>Current Scroll:</td>
             <td id = "currentfilename"></td>
         </tr>
         <tr>
@@ -253,6 +253,8 @@ httpc8.send();
 
 document.getElementById("newscrollinput").onchange = function(){
     currentfile = "scrolls/" + this.value;
+    document.getElementById("userlink").href = "user.php?scroll=" + currentfile;    
+    addscrolllink(this.value);
     document.getElementById("currentfilename").innerHTML = currentfile;       
     var httpc = new XMLHttpRequest();
     httpc.onreadystatechange = function() {
@@ -274,6 +276,8 @@ document.getElementById("modebutton").onclick = function(){
 }
 
 modeswitch();
+modeswitch();
+
 function modeswitch(){
     if(mode == "dark"){
         mode = "light";
@@ -287,31 +291,35 @@ function modeswitch(){
         document.getElementById("modebutton").innerHTML = "LIGHT MODE";
         document.getElementById("maintextarea").style.backgroundColor = "black";
         document.getElementById("maintextarea").style.color = "#00ff00";        
-        document.body.style.backgroundColor = "#808080";
+        document.body.style.backgroundColor = "black";
     }
 }
 
 
 
-function text2hex(text){
-    hex = "";
-    for(var index = 0;index < text.length;index++){
-        charcode = text.charCodeAt(index);
-        hex += "0x" + charcode.toString(16) + ",";
-    }
-    return hex;
-}
 
-function hex2text(hex){
-    bytelist = hex.split(",");
-    text = "";
-    for(var index = 0;index < bytelist.length;index++){
-        if(bytelist[index].length>0){
-            charcode = parseInt(bytelist[index],16);
-            text += String.fromCharCode(charcode);
-        }
+function addscrolllink(newscroll){
+    
+    var newscrollbutton = document.createElement("div");
+    newscrollbutton.className = "scrollbutton";
+    newscrollbutton.innerHTML = "scrolls/" + newscroll;
+    document.getElementById("feedscroll").appendChild(newscrollbutton);
+    newscrollbutton.onclick = function(){
+        document.getElementById("newscrollinput").value = "";
+        currentfile = this.innerHTML;
+        document.getElementById("currentfilename").innerHTML = currentfile;
+        document.getElementById("userlink").href = "user.php?scroll=" + currentfile;            
+        var httpc = new XMLHttpRequest();
+        httpc.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                scroll = this.responseText;
+                document.getElementById("maintextarea").value = scroll; 
+            }
+        };
+        httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
+        httpc.send();
+        
     }
-    return text;
 }
 
 </script>
@@ -319,14 +327,25 @@ function hex2text(hex){
 
 body{
     overflow:hidden;
+    background-color:black;
+    color:#00ff00;
+    font-family:courier;
+    
 }
 .scrollbutton{
     cursor:pointer;
-    color:blue;
+    color:#ff2cb4;
     margin-bottom:0.5em;
 }
 .data{
     display:none;
+}
+#newscrollinput{
+    background-color:black;
+    color:#ff2cb4;
+    border-color:#ff2cb4;
+    border:solid;
+    font-family:courier;
 }
 #modebutton{
     display:none;
@@ -347,7 +366,7 @@ body{
     padding-top:1em;
     background-color:black;
     color:#00ff00;
-    font-family:"Times New Roman", Times, serif;
+    font-family:courier;
     font-size:1.5em;
     overflow:scroll;
 }
@@ -401,6 +420,7 @@ body{
         font-size:2em;
     }
 }
+
 
         </style>
     </body>
