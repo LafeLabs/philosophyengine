@@ -1,11 +1,5 @@
 [return home](scrolls/home)
 
-[editor.php](editor.php)
-
-[replicator raw text](https://raw.githubusercontent.com/LafeLabs/philosophyengine/master/php/replicator.txt)
-
-[dnagenerator.php](dnagenerator.php)
-
 # Philosophy Engine
 
 [github repository for this](https://github.com/LafeLabs/philosophyengine/)
@@ -21,6 +15,14 @@ For more information, see [www.trashrobot.org](https://www.trashrobot.org/).
 Text documents are called "scrolls" and are in [Markdown](https://daringfireball.net/projects/markdown/).
 
 Links between scrolls are formed by simply making a markdown link which has "scrolls/" and then the scroll name. Click the pencil icon to edit a scroll, then the scroll icon to get back to the reader.
+
+[editor.php](editor.php)
+
+[replicator raw text](https://raw.githubusercontent.com/LafeLabs/philosophyengine/master/php/replicator.txt)
+
+[dnagenerator.php](dnagenerator.php)
+
+[qrcode.html](qrcode.html)
 
 Edit icon:
 
