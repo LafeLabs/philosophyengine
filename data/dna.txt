@@ -6,7 +6,6 @@
         "index.html",
         "qrcode.html",
         "scrolldelete.html",
-        "scrolleditor.html",
         "set.html"
     ],
     "javascript": [],
@@ -43,9 +42,11 @@
         "binarytrue",
         "home",
         "jokequantum",
+        "no",
         "quantumdumb",
         "quantumyes",
         "seriousquantum",
-        "setmagic"
+        "setmagic",
+        "yes"
     ]
 }

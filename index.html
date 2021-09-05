@@ -179,6 +179,7 @@ function convertscrollinks(){
                 loadscroll(localscroll);
             }
         }
+
     }
 }
 
@@ -214,7 +215,7 @@ function modeswitch(){
         document.getElementById("scrollscroll").style.color = "#00ff00";    
         document.getElementById("scrollinput").style.color = "#ff2cb4";
         document.getElementById("scrollinput").style.backgroundColor = "black";              
-        document.getElementById("scrollsbox").style.backgroundColor = "#202060";
+        document.getElementById("scrollsbox").style.backgroundColor = "#000020";
         document.getElementById("scrollsbox").style.color = "#00ff00";
         document.getElementById("modebutton").style.color = "#00ff00"; 
         document.getElementById("modebutton").style.borderColor = "#00ff00"; 
@@ -237,10 +238,10 @@ httpc9.onreadystatechange = function() {
         for(var index = 0;index < scrolls.length;index++) {
             var newscrollbutton = document.createElement("P");
             newscrollbutton.className = "boxlink";
-            newscrollbutton.innerHTML = "scrolls/" + scrolls[index];
+            newscrollbutton.innerHTML = scrolls[index];
             document.getElementById("scrollsbox").appendChild(newscrollbutton);
             newscrollbutton.onclick = function(){
-                currentFile = this.innerHTML;
+                currentFile =  "scrolls/" + this.innerHTML;
                 loadscroll(currentFile);
             }
         }
@@ -255,18 +256,6 @@ document.getElementById("scrollinput").value = "";
 document.getElementById("scrollinput").onchange = function(){
     loadscroll(this.value);
     this.value = "";
-}
-
-function hex2text(hex){
-    bytelist = hex.split(",");
-    text = "";
-    for(var index = 0;index < bytelist.length;index++){
-        if(bytelist[index].length>0){
-            charcode = parseInt(bytelist[index],16);
-            text += String.fromCharCode(charcode);
-        }
-    }
-    return text;
 }
 
 
@@ -290,6 +279,8 @@ input{
 .boxlink{
     padding-left:1em;
     cursor:pointer;
+    color:#ff2cb4;    
+
 }
 .boxlink:hover{
     background-color:#808080;

@@ -45,7 +45,6 @@
 <div id = "modebutton" class = "button">LIGHT<br>DARK</div>
 <div id = "hidebutton" class = "button"><span id  = "hideshow">SHOW</span><br>MENU</div>
 <div id = "margin">
-    <div id = "marginbutton">⇳⇳⇳⇳⇳⇳⇳⇳⇳⇳⇳</div>
     <div id  = "scrollsbox">
         <input id = "scrollinput"/>
         <a id = "scrolleditorlink" href = "scrolleditor.php">
@@ -235,7 +234,7 @@ function modeswitch(){
         document.getElementById("scrollscroll").style.color = "#00ff00";    
         document.getElementById("scrollinput").style.color = "#ff2cb4";
         document.getElementById("scrollinput").style.backgroundColor = "black";              
-        document.getElementById("scrollsbox").style.backgroundColor = "#202060";
+        document.getElementById("scrollsbox").style.backgroundColor = "#000020";
         document.getElementById("scrollsbox").style.color = "#00ff00";
         document.getElementById("modebutton").style.color = "#00ff00"; 
         document.getElementById("modebutton").style.borderColor = "#00ff00"; 
@@ -257,10 +256,10 @@ httpc9.onreadystatechange = function() {
         for(var index = 0;index < scrolls.length;index++) {
             var newscrollbutton = document.createElement("P");
             newscrollbutton.className = "boxlink";
-            newscrollbutton.innerHTML = "scrolls/" + scrolls[index];
+            newscrollbutton.innerHTML = scrolls[index];
             document.getElementById("scrollsbox").appendChild(newscrollbutton);
             newscrollbutton.onclick = function(){
-                currentFile = this.innerHTML;
+                currentFile =  "scrolls/" + this.innerHTML;
                 loadscroll(currentFile);
             }
         }
@@ -297,6 +296,7 @@ input{
 .boxlink{
     padding-left:1em;
     cursor:pointer;
+    color:#ff2cb4;    
 }
 .boxlink:hover{
     background-color:#808080;

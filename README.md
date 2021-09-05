@@ -1,5 +1,11 @@
 [return home](scrolls/home)
 
+[editor.php](editor.php)
+
+[replicator raw text](https://raw.githubusercontent.com/LafeLabs/philosophyengine/master/php/replicator.txt)
+
+[dnagenerator.php](dnagenerator.php)
+
 # Philosophy Engine
 
 [github repository for this](https://github.com/LafeLabs/philosophyengine/)

@@ -29,6 +29,20 @@
 
     </head>
 <body>
+<div id = "prototypescroll" style = "display:none">
+[home](scrolls/home)    
+    
+# This thing is what it is
+
+Statements may be made about this thing. It is a thing in the most abstract sense, and could be an idea, a place, a person, an object, a feeling, a web page, a work of art, a mode of existence, or any elment of human thought in the most general possible sense.
+
+
+Are you ready to be asked a question?
+
+ - [yes](scrolls/yes)
+ - [no](scrolls/no)
+
+</div>
     
 <textarea id = "maintextarea"></textarea>
 <div id = "feedscroll">
@@ -95,6 +109,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
                 document.getElementById("maintextarea").value = scroll;  
                 document.getElementById("currentfilename").innerHTML = currentfile;        
                 document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+                importprototype();
             }
         };
         httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -110,6 +125,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
                 currentfile = "scrolls/remote";
                 document.getElementById("currentfilename").innerHTML = currentfile;
                 document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
+                importprototype();
             }
         };
         httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -130,6 +146,7 @@ if(document.getElementById("scrolldiv").innerHTML.length > 0 && document.getElem
             document.getElementById("currentfilename").innerHTML = currentfile;
             document.getElementById("userlink").href = "user.php?scroll=" + currentfile;
             
+            importprototype();
             data = encodeURIComponent(scroll);
             var httpc = new XMLHttpRequest();
             var url = "filesaver.php";        
@@ -199,7 +216,7 @@ var httpc7 = new XMLHttpRequest();
                             scroll = this.responseText;
                             
                             document.getElementById("maintextarea").value = scroll;  
-
+                            importprototype();
 
                         }
                     };
@@ -237,6 +254,7 @@ if (this.readyState == 4 && this.status == 200) {
                 if (this.readyState == 4 && this.status == 200) {
                     scroll = this.responseText;
                     document.getElementById("maintextarea").value = scroll; 
+                    importprototype();
                 }
             };
             httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -262,6 +280,7 @@ document.getElementById("newscrollinput").onchange = function(){
             scroll = this.responseText;
             document.getElementById("maintextarea").value = scroll; 
             document.getElementById("currentfilename").innerHTML = currentfile;
+            importprototype();
         }
     };
     httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -303,7 +322,14 @@ function addscrolllink(newscroll){
     var newscrollbutton = document.createElement("div");
     newscrollbutton.className = "scrollbutton";
     newscrollbutton.innerHTML = "scrolls/" + newscroll;
-    document.getElementById("feedscroll").appendChild(newscrollbutton);
+    
+    scrollbuttons = document.getElementById("feedscroll").getElementsByClassName("scrollbutton");
+    
+    document.getElementById("feedscroll").insertBefore(newscrollbutton,scrollbuttons[1]);
+    
+//    document.getElementById("feedscroll").appendChild(newscrollbutton);
+    
+    
     newscrollbutton.onclick = function(){
         document.getElementById("newscrollinput").value = "";
         currentfile = this.innerHTML;
@@ -314,11 +340,19 @@ function addscrolllink(newscroll){
             if (this.readyState == 4 && this.status == 200) {
                 scroll = this.responseText;
                 document.getElementById("maintextarea").value = scroll; 
+                importprototype();
             }
         };
         httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
         httpc.send();
         
+    }
+}
+
+function importprototype(){
+    if(document.getElementById("maintextarea").value == ""){
+        prototypescroll = document.getElementById("prototypescroll").innerHTML;
+        document.getElementById("maintextarea").value = prototypescroll; 
     }
 }
 
