@@ -42,7 +42,7 @@ scrollset0 = {
         "no"
     ]
 };
-scrollset = scrollset0;
+scrollset = JSON.parse(JSON.stringify(scrollset0));
 
 scrolls = [];
 
@@ -98,7 +98,7 @@ function savejson(){
 
 
 document.getElementById("resetbutton").onclick = function(){
-    scrollset = scrollset0;
+    scrollset = JSON.parse(JSON.stringify(scrollset0));
     document.getElementById("serverinput").value = scrollset.server;
     document.getElementById("textio").value = JSON.stringify(scrollset.scrolls,null,"    ");
     savejson();
