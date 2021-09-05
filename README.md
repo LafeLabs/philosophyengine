@@ -2,13 +2,15 @@
 
 # Philosophy Engine
 
+[scroll set replicator](scrollset.html)
+
 [github repository for this](https://github.com/LafeLabs/philosophyengine/)
 
 [fork down](fork.html)
 
 [replicator raw code](php/replicator.txt)
 
-[scroll set replicator](scrollset.html)
+[copy.html](copy.html)
 
 Organic media. The rules of Organic Media are:
 
