@@ -107,6 +107,7 @@ document.getElementById("resetbutton").onclick = function(){
 document.getElementById("herebutton").onclick = function(){
     var localurl = window.location.href.split("scrollset.html")[0];
     scrollset.server = localurl;
+    document.getElementById("serverinput").value = scrollset.server;
     savejson();
 }
 
