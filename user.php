@@ -80,7 +80,7 @@ else{
 
     document.getElementById("scrollscroll").style.height = (innerHeight - 100).toString() + "px";        
     document.getElementById("margin").style.display = "none";
-    document.getElementById("margin").style.height = (innerHeight - innerWidth - 150).toString() + "px";
+    document.getElementById("margin").style.height = (0.5*innerHeight).toString() + "px";
     document.getElementById("margin").style.bottom = "0px";
     
 }
@@ -91,16 +91,10 @@ document.getElementById("hidebutton").onclick = function(){
     if(menuhide){
         document.getElementById("hideshow").innerHTML = "SHOW";
         document.getElementById("margin").style.display = "none";
-        if(innerHeight > innerWidth){
-            document.getElementById("scrollscroll").style.height = (innerHeight - 100).toString() + "px";        
-        }
     }
     else{
         document.getElementById("hideshow").innerHTML = "HIDE";
         document.getElementById("margin").style.display = "block";
-        if(innerHeight > innerWidth){
-            document.getElementById("scrollscroll").style.height = (innerWidth + 150).toString() + "px";        
-        }
     }
 }
 
@@ -309,6 +303,10 @@ input{
 .scrolllink:hover{
     background-color:#ff2cb490;
 }
+#scrollinput{
+    display:none;
+}
+
 #scrollscroll{
     padding-left:1em;
     padding-right:1em;
