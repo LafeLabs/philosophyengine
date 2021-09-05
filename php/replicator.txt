@@ -68,7 +68,10 @@ foreach($dna->scrolls as $value){
 ?>
 <a href = "index.html">CLICK TO GO TO PAGE</a>
 <style>
-a{
+a,body{
     font-size:3em;
+    background-color:black;
+    color:#ff2cb4;
+    font-family:courier;
 }
 </style>

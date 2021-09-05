@@ -20,10 +20,7 @@ echo "<a href = \"".$dirname."/replicator.php\">".$dirname."/replicator.php</a>"
 
 ?>
 <style>
-    body,a{
-        font-size:2em;
-        background-color:black;
-        color:#ff2cb4;
-        font-family:courier;
+    a{
+        font-size:3em;
     }
 </style>

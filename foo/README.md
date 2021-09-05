@@ -4,8 +4,6 @@
 
 [github repository for this](https://github.com/LafeLabs/philosophyengine/)
 
-[fork down](fork.html)
-
 [replicator raw code](php/replicator.txt)
 
 Organic media. The rules of Organic Media are:
