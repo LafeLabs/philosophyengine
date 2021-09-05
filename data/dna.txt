@@ -37,9 +37,7 @@
     ],
     "maps": [],
     "scrolls": [
-        "geometron",
         "home",
-        "language",
         "no",
         "yes"
     ]
