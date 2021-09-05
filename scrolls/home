@@ -1,10 +1,9 @@
-# Philosophy Engine
+# Philosophy 
 
-We begin with the binary.  One and zero. True and false.  Many people have claimed to know what is true.  To do so is to divide things into truth and falsehood.  It is to apply a division into two categories of all statements.
+A philosophy is a collection of things with names.  
 
-Is the binary a true description of reality?
+Is this true?
 
- - [yes](scrolls/binarytrue)
- - [no](scrolls/binaryfalse)
- - [reject](scrolls/binaryreject)
- - [I don't even know where I am right now](scroll(README.md))
+ - [yes](scrolls/yes)
+ - [no](scrolls/no)
+ - [I don't even know where I am right now (README)](scroll(README.md))

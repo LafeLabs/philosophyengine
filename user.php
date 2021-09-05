@@ -248,7 +248,7 @@ httpc9.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         scrolls = JSON.parse(this.responseText);
         for(var index = 0;index < scrolls.length;index++) {
-            var newscrollbutton = document.createElement("P");
+            var newscrollbutton = document.createElement("DIV");
             newscrollbutton.className = "boxlink";
             newscrollbutton.innerHTML = scrolls[index];
             document.getElementById("scrollsbox").appendChild(newscrollbutton);
@@ -291,6 +291,8 @@ input{
     padding-left:1em;
     cursor:pointer;
     color:#ff2cb4;    
+    font-size:1.5em;
+    margin-top:0.25em;
 }
 .boxlink:hover{
     background-color:#808080;

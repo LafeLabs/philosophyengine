@@ -32,12 +32,11 @@
 <div id = "prototypescroll" style = "display:none">
 [home](scrolls/home)    
     
-# This thing is what it is
+# name
 
-Statements may be made about this thing. It is a thing in the most abstract sense, and could be an idea, a place, a person, an object, a feeling, a web page, a work of art, a mode of existence, or any elment of human thought in the most general possible sense.
+Statement about thing.
 
-
-Are you ready to be asked a question?
+Is this a question?
 
  - [yes](scrolls/yes)
  - [no](scrolls/no)
@@ -268,8 +267,10 @@ if (this.readyState == 4 && this.status == 200) {
 httpc8.open("GET", "dir.php?filename=scrolls", true);
 httpc8.send();
 
-
+name = "";
+newname = false;
 document.getElementById("newscrollinput").onchange = function(){
+    name = this.value;
     currentfile = "scrolls/" + this.value;
     document.getElementById("userlink").href = "user.php?scroll=" + currentfile;    
     addscrolllink(this.value);
@@ -281,6 +282,14 @@ document.getElementById("newscrollinput").onchange = function(){
             document.getElementById("maintextarea").value = scroll; 
             document.getElementById("currentfilename").innerHTML = currentfile;
             importprototype();
+
+            data = encodeURIComponent(scroll);
+            var httpc = new XMLHttpRequest();
+            var url = "filesaver.php";        
+            httpc.open("POST", url, true);
+            httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+            httpc.send("data="+data+"&filename=" + currentfile);//send text to filesaver.php
+            
         }
     };
     httpc.open("GET", "fileloader.php?filename=" + currentfile, true);
@@ -351,8 +360,9 @@ function addscrolllink(newscroll){
 
 function importprototype(){
     if(document.getElementById("maintextarea").value == ""){
-        prototypescroll = document.getElementById("prototypescroll").innerHTML;
-        document.getElementById("maintextarea").value = prototypescroll; 
+        scroll = document.getElementById("prototypescroll").innerHTML;
+        scroll = scroll.replace(/name/g,name);
+        document.getElementById("maintextarea").value = scroll; 
     }
 }
 

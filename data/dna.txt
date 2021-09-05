@@ -37,16 +37,8 @@
     ],
     "maps": [],
     "scrolls": [
-        "binaryfalse",
-        "binaryreject",
-        "binarytrue",
         "home",
-        "jokequantum",
         "no",
-        "quantumdumb",
-        "quantumyes",
-        "seriousquantum",
-        "setmagic",
         "yes"
     ]
 }

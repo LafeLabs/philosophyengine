@@ -4,6 +4,8 @@
 
 [github repository for this](https://github.com/LafeLabs/philosophyengine/)
 
+[replicator raw code](php/replicator.txt)
+
 Organic media. The rules of Organic Media are:
 
  - Everything replicates. Anyone can replicate any system or document at any time to anywhere.
@@ -23,6 +25,8 @@ Links between scrolls are formed by simply making a markdown link which has "scr
 [dnagenerator.php](dnagenerator.php)
 
 [qrcode.html](qrcode.html)
+
+[http://localhost](http://localhost)
 
 Edit icon:
 
