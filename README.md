@@ -8,6 +8,8 @@
 
 [replicator raw code](php/replicator.txt)
 
+[scroll set replicator](scrollset.html)
+
 Organic media. The rules of Organic Media are:
 
  - Everything replicates. Anyone can replicate any system or document at any time to anywhere.
@@ -29,6 +31,8 @@ Links between scrolls are formed by simply making a markdown link which has "scr
 [qrcode.html](qrcode.html)
 
 [http://localhost](http://localhost)
+
+[set.html](set.html)
 
 Edit icon:
 
