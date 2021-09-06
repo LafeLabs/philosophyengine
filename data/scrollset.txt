@@ -1,6 +1,7 @@
 {
     "server": "https://raw.githubusercontent.com/LafeLabs/philosophyengine/main/",
     "scrolls": [
+        "derp",
         "home",
         "no",
         "yes"
