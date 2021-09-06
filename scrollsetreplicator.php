@@ -3,7 +3,7 @@
 
 
 $localscrollsetraw = file_get_contents("data/scrollset.txt");
-$localscrollset = json_decode($scrollsetraw);
+$localscrollset = json_decode($localscrollsetraw);
 
 $server = $localscrollset->server;
 
@@ -17,7 +17,7 @@ foreach($scrolls as $value){
 
 }
 
-    echo json_encode($scrollset,JSON_PRETTY_PRINT);
+echo json_encode($scrolls,JSON_PRETTY_PRINT);
     
 ?>
 </pre>

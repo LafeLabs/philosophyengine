@@ -14,6 +14,8 @@
 
 [code editor editor.php](editor.php)
 
+link pink rgb: #ff2cb4
+
 Organic media. The rules of Organic Media are:
 
  - Everything replicates. Anyone can replicate any system or document at any time to anywhere.
