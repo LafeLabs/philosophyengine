@@ -7,7 +7,13 @@ $scrollseturl = "data/scrollset.txt";
 $scrollsetraw = file_get_contents($scrollseturl);
 $scrollset = json_decode($scrollsetraw);
 $scrolls = $scrollset->scrolls;
+
 $server = $scrollset->server;
+
+$scrollsetremoteurl = $server."data/scrollset.txt";
+$scrollsetremoteraw = file_get_contents($scrollsetremoteurl);
+$scrollsetremote = json_decode($scrollsetremoteraw);
+$scrolls = $scrollsetremote->scrolls;
 
 foreach($scrolls as $value){
 
